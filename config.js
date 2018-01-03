@@ -37,7 +37,7 @@ config.httpPort = 8000;
 
 //
 /* other settings */
-config.ngrok.path = process.platform === 'win32' ? `${env.HOMEPATH}\\ngrok.exe` : '~/ngrok';
+config.ngrok.path = process.platform === 'win32' ? `${env.HOMEPATH}\\ngrok.exe` : `${env.HOME}/ngrok`;
 config.ngrok.dashboard = 'http://127.0.0.1:4040';
 config.webhooks = {};
 config.webhooks.alarm = '';
