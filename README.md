@@ -9,12 +9,23 @@ A future project will include Alexa Skill integration but that requirement incre
 
 __This project is a work in progress__
 
-**What's working:** (_Currently tested on Windows only_)
+**What's working:**
+
+* Raspberry Pi
+  * Config/install scripts
+  * Node.js/Express, Python, Walabot drivers, RabbitMQ
+
+* Python Walabot Service
+  * Connect and configure Walabot device
+  * Check if user is in bed (asleep) or awake
+  * Publish status to RabbitMQ
 
 * Node / Express webserver
   * Handle incoming alarm webhook
-  * Send webhooks to IFTTT
+  * Send/receive webhooks to/from IFTTT
   * Actions configuration
+  * Walabot python service interface using RabbitMQ
+  * Walabot control logic - trigger wake-up device(s) if you are still in bed after the alarm goes off
 
 * ngrok support
   * Auto-create ngrok tunnel
@@ -22,8 +33,7 @@ __This project is a work in progress__
   * Custom subdomain support (paid accounts only)
 
 **Todo:**
-
-* Testing on Linux / Raspberry Pi
-* Walabot device interface
-* Walabot control logic - trigger wake-up device(s) if you are still in bed after the alarm goes off
-
+* Test install scripts
+* More app testing
+* Tweak Walabot sensitivity/angles settings
+* Documentation

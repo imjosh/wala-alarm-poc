@@ -51,7 +51,13 @@ function getUri() {
         console.error('ngrok tunnel failed to start');
         return;
       }
-      const tunnel = JSON.parse(body).tunnels[0].public_url.split('/')[2];
+      let tunnel = '';
+      try {
+        tunnel = JSON.parse(body).tunnels[0].public_url.split('/')[2];
+      } catch (error) {
+        console.error('There was a problem creating the ngrok tunnel');
+      }
+
       if (tunnel) {
         console.log(`ngrok tunnel created successfully. Dashboard: ${config.ngrok.dashboard}`);
         config.webhooks.alarm = `${tunnel}/webhooks/alarm`;

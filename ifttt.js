@@ -1,5 +1,4 @@
 const request = require('request');
-const config = require('./config');
 const actions = require('./actions');
 
 function sendWebHook(actionId, trigger) {
@@ -14,7 +13,6 @@ function sendWebHook(actionId, trigger) {
         console.error(`send ifttt webhook failed: ${err}`);
         return;
       }
-
       // fix me wrap in try - body is json on error, text on success
       // const bodyObj = JSON.parse(body);
       // if (bodyObj.errors.length) {
@@ -22,8 +20,7 @@ function sendWebHook(actionId, trigger) {
       //   return;
       // }
       // console.log(`sent ifttt webhook. action: ${actionId}, trigger: ${trigger}`);
-
-      console.log(body);
+      console.log(`IFTTT says: ${body}`);
     }
   );
 }
