@@ -37,11 +37,13 @@ curl -L  https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip -o /tmp
 unzip /tmp/ngrok.zip
 
 # github
-sudo apt-get install -y github
+sudo apt-get install -y git
 
 # clone this project and run
 git clone https://github.com/imjosh/wala-alarm-poc.git
 cd wala-alarm-poc
+git checkout test_install
+# npm install -g --save pm2
 npm update
 npm install
 npm run
