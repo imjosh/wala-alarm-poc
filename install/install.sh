@@ -8,7 +8,7 @@
 # pip install WalabotAPI --no-index --find-links="/usr/share/walabot/python/"
 
 # walabot-maker 1.0.34
-# you must accept the eula (tab-enter, enter)
+# you must accept the eula (tab-enter, left arrow, enter)
 curl -L https://walabot.com/WalabotInstaller/Latest/walabot_maker_1.0.34_raspberry_arm32.deb -o /tmp/walabot_maker_1.0.34.deb
 sudo apt install -y /tmp/walabot_maker_1.0.34.deb
 pip install WalabotAPI --no-index --find-links="/usr/share/walabot/python/"
@@ -46,6 +46,6 @@ git checkout test_install
 # npm install -g --save pm2
 npm update
 npm install
-npm run
+npm start
 
 # todo start node and python automatically as services

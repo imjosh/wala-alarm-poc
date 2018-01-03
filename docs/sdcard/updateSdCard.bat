@@ -1,1 +1,1 @@
-copy sdcard\* d:\
+copy docs\sdcard\* d:\
