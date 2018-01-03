@@ -31,7 +31,7 @@ pip install pika
 sudo rabbitmqctl add_user pi raspberry
 sudo rabbitmqctl set_permissions -p / pi ".*" ".*" ".*"
 sudo rabbitmqctl set_policy my-pol "hello" '{"max-length":1}' --apply-to queues
-
+sudo rabbitmqctl start_app
 # ngrok
 curl -L  https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip -o /tmp/ngrok.zip
 unzip /tmp/ngrok.zip
@@ -46,6 +46,8 @@ git checkout test_install
 # npm install -g --save pm2
 npm update
 npm install
-npm start
+npm start &
+
+/usr/bin/python ./walabot/app.py
 
 # todo start node and python automatically as services
